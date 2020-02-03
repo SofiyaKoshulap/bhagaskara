@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+}
+
+<div class="section_skils">
+    <div class="conteiner">
+        <div class="title_section">
+            <img src="/Content/imeges/right.png.png">
+            <h1>Our<span class="last_word"> skils</span></h1>
+            <img src="/Content/imeges/left.png">
+        </div>
+        <div class="collections_skils">
+            <div class="collections_outer_skils">
+                <div class="collections_item_skils">
+                    <div class="collections_text_skils">
+                        <h1>WEB DESIGN</h1>
+                        <p>90%</p>
+                    </div>
+                    <div class="persent_area"><div class="persent1"></div></div>
+                </div>
+            </div>
+            <div class="collections_outer_skils">
+                <div class="collections_item_skils">
+                    <div class="collections_text_skils">
+                        <h1>GRAPHIC DESIGN</h1>
+                        <p>70%</p>
+                    </div>
+                    <div class="persent_area"><div class="persent2"></div></div>
+                </div>
+            </div>
+            <div class="collections_outer_skils">
+                <div class="collections_item_skils">
+                    <div class="collections_text_skils">
+                        <h1>HTML/CSS</h1>
+                        <p>75%</p>
+                    </div>
+                    <div class="persent_area"><div class="persent3"></div></div>
+                </div>
+            </div>
+            <div class="collections_outer_skils">
+                <div class="collections_item_skils">
+                    <div class="collections_text_skils">
+                        <h1>UL/UX</h1>
+                        <p>85%</p>
+                    </div>
+                    <div class="persent_area"><div class="persent4"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="section_statistic">
+    <div class="conteiner">
+        <div class="collections_statistic">
+            <div class="collections_outer_statistic">
+                <div class="collections_text_statistic">
+                    <h1>365</h1>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+            <div class="collections_outer_statistic">
+                <div class="collections_text_statistic">
+                    <h1>98%</h1>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+            <div class="collections_outer_statistic">
+                <div class="collections_text_statistic">
+                    <h1>69</h1>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+            <div class="collections_outer_statistic">
+                <div class="collections_text_statistic">
+                    <h1>1642</h1>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section_review">
+    <div class="conteiner">
+        <div class="collections_review">
+            <div class="collections_outer_review">
+                <img src="/Content/imeges/review.jpg">
+                <div class="collections_text_review">
+                    <p>"Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat"</p>
+                    <h1>lesale christoper, pinterest</h1>
+                </div>
+            </div>
+            <div class="collections_outer_review">
+                <img src="/Content/imeges/review2.jpg">
+                <div class="collections_text_review">
+                    <p>"Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat"</p>
+                    <h1>lesale christoper, pinterest</h1>
+                </div>
+            </div>
+            <div class="collections_outer_review">
+                <img src="/Content/imeges/review3.jpg">
+                <div class="collections_text_review">
+                    <p>"Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat"</p>
+                    <h1>lesale christoper, pinterest</h1>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+	var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+setInterval(plusSlide, 6000);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("collections_outer_review");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+</script>
+
+

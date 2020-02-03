@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BHAGASKARA</title>
+    <link href="https://fonts.googleapis.com/css?family=Laila:300,400|Lato:300,400|Maitree:300,400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    @RenderSection("Intro", false) 
+    <div class="header">
+        <div class="conteiner">
+            <div class="header_inner">
+                <div class="header_logo">
+                    <h1 class="name_logo">Bhagas<span class="last_word">kara</span>.</h1>
+                </div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href="@Url.Action( "Index", "Home")"> home</a>
+                    <a class="nav_link" href="@Url.Action( "About", "Home")"> about</a>
+                    <a class="nav_link" href="@Url.Action( "Team", "Home")"> team</a>
+                    <a class="nav_link" href="@Url.Action( "Services", "Home")"> services</a>
+                    <a class="nav_link" href="@Url.Action( "Portfolio", "Home")"> portfolio</a>
+                    <a class="nav_link" href="@Url.Action( "Contact", "Home")"> contact</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderBody()
+
+    <footer>
+        <div class="conteiner">
+            <h1 class="footer_logo">Bhagas<span class="last_word">kara</span>.</h1>
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

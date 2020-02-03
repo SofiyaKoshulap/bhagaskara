@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+
+
+<div class="section_contact">
+    <div class="conteiner">
+        <div class="title_section_cotact">
+            <img src="/Content/imeges/right.png.png">
+            <h1>Get<span class="last_word"> in touch</span></h1>
+            <img src="/Content/imeges/left.png">
+        </div>
+        <div class="contact">
+            <div class="collections_outer_contact">
+              
+                <form class="form_contact" method="POST" action="/Home/CreateFeedback">
+                    <input type="hidden" value="@ViewBag.Id" name="FeedbackId" />
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
+
+
+                    <textarea name="message" id="message" placeholder="Your message" required></textarea>
+
+                    <input type="submit" id="submit" name="" value="Send">
+                </form>
+            </div>
+            <div class="collections_outer_contact">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, v iverra non, semper suscipit, posuere a, pede.</p>
+                <p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America.</p>
+                <p>
+                    T: (202) 456-1111<br>
+                    M: (202) 456-1212
+                </p>
+                <a href="https://www.facebook.com">f</a>
+                <a href="https://www.facebook.com">t</a>
+                <a href="https://www.google.com/">g</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+
+            alert("@ViewBag.Message");
+        };
+    </script>
+}
+
+
